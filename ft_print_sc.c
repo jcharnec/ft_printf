@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_sc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: areverte <areverte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:53:33 by areverte          #+#    #+#             */
-/*   Updated: 2023/02/11 15:53:34 by areverte         ###   ########.fr       */
+/*   Updated: 2023/04/05 18:00:12 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-//prints a string and returns the amount of characters
+//función que imprime una cadena de caracteres y 
+//devuelve la cantidad de caracteres impresos.
 int	ft_print_s(char *s)
 {
 	int	cont;
@@ -32,7 +33,8 @@ int	ft_print_s(char *s)
 	return (cont);
 }
 
-//prints a char, the function returns as a boolean
+//función que imprime un carácter y devuelve un valor 
+//booleano que indica si la operación fue exitosa o no.
 int	ft_print_char(int c)
 {
 	if (write (1, &c, 1) == -1)

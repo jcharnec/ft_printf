@@ -3,17 +3,23 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: areverte <areverte@student.42.fr>          +#+  +:+       +#+         #
+#    By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/11 15:55:08 by areverte          #+#    #+#              #
-#    Updated: 2023/02/11 15:55:09 by areverte         ###   ########.fr        #
+#    Updated: 2023/04/05 18:01:23 by jcharnec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = gcc
-SRC = ft_printf.c ft_print_sc.c ft_print_hex.c ft_print_ptr.c ft_print_decs.c ft_itoa.c ft_u_itoa.c
+SRC = 	ft_printf.c 	\
+		ft_print_sc.c 	\
+		ft_print_hex.c 	\
+		ft_print_ptr.c 	\
+		ft_print_decs.c \
+		ft_itoa.c 		\
+		ft_u_itoa.c
 
 FLAGS = -Wall -Werror -Wextra
 OBJ = $(SRC:.c=.o)

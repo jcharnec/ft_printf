@@ -6,13 +6,14 @@
 /*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:53:06 by areverte          #+#    #+#             */
-/*   Updated: 2023/04/04 13:12:28 by jcharnec         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:36:13 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-//prints hex and returns the counter of numbers
+//función recursiva que imprime un número en hexadecimal
+//y devuelve la cantidad de números que se imprimieron
 static int	ft_print_hexp(unsigned long long nb)
 {
 	int		cont;
@@ -42,7 +43,8 @@ static int	ft_print_hexp(unsigned long long nb)
 	return (cont);
 }
 
-//reurns size of the pointer plus 2 which is 0x
+//función que imprime un puntero en hexadecimal 
+//y devuelve la cantidad de números que se imprimieron.
 int	ft_print_ptr(void *p)
 {
 	if (!p)

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: areverte <areverte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:51:14 by areverte          #+#    #+#             */
-/*   Updated: 2023/02/11 15:51:15 by areverte         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:55:21 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-//returns the number of digits of a number
+//función que cuenta la cantidad de dígitos en un número entero
 static int	ft_digits(long nb)
 {
 	int	digits;
@@ -31,7 +31,7 @@ static int	ft_digits(long nb)
 	return (digits);
 }
 
-//this function fills up the string
+//función que convierte un número entero en una cadena de caracteres
 static char	*ft_tostring(char *s, int digits, long i)
 {
 	if (i < 0)
@@ -48,7 +48,7 @@ static char	*ft_tostring(char *s, int digits, long i)
 	return (s);
 }
 
-//itoa normal, int to String
+//convierte un entero a una cadena de caracteres
 char	*ft_itoa(int n)
 {
 	char	*s;

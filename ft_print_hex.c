@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: areverte <areverte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:52:32 by areverte          #+#    #+#             */
-/*   Updated: 2023/02/11 15:52:33 by areverte         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:45:44 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+//función recursiva que imprime un número en hexadecimal 
+//y devuelve la cantidad de números que se imprimieron.
 int	ft_print_hex(unsigned int nb)
 {
 	int		cont;
@@ -41,6 +43,8 @@ int	ft_print_hex(unsigned int nb)
 	return (cont);
 }
 
+//función recursiva que imprime un número en hexadecimal en
+//mayusculas y devuelve la cantidad de números que se imprimieron.
 int	ft_print_hexmay(unsigned int nb)
 {
 	int		cont;

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_decs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: areverte <areverte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:51:40 by areverte          #+#    #+#             */
-/*   Updated: 2023/02/11 15:51:41 by areverte         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:50:59 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-//this func prints a number a frees the memory
+//función que toma un número entero como entrada y lo convierte 
+//en una cadena de caracteres utilizando la función ft_itoa
 int	ft_print_bsten(int nb)
 {
 	int		cont;
@@ -24,7 +25,8 @@ int	ft_print_bsten(int nb)
 	return (cont);
 }
 
-//this function prints a positive number and frees the memory
+//La función que toma un número entero sin signo como entrada y 
+//lo convierte en una cadena de caracteres utilizando la función ft_u_itoa
 int	ft_print_decu(unsigned int nb)
 {
 	int		cont;
