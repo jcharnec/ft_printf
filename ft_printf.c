@@ -6,7 +6,7 @@
 /*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:54:07 by areverte          #+#    #+#             */
-/*   Updated: 2023/04/05 18:04:32 by jcharnec         ###   ########.fr       */
+/*   Updated: 2023/04/05 19:08:58 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,13 @@ int	ft_printf(char const *s, ...)
 int	main(void)
 {
 	ft_printf("Hola %s\n", "mundo");
-	ft_printf("El número %d en binario es %b\n", 42, 42);
+	printf("Hola %s\n", "mundo");
 	ft_printf("El número %d en octal es %o\n", 42, 42);
+	printf("El número %d en octal es %o\n", 42, 42);
 	ft_printf("El número %d en hexadecimal es %x\n", 42, 42);
+	printf("El número %d en hexadecimal es %x\n", 42, 42);
 	ft_printf("El número %f con dos decimales es %.2f\n", 3.14159, 3.14159);
+	printf("El número %f con dos decimales es %.2f\n", 3.14159, 3.14159);
 	return (0);
 }
 */

@@ -6,33 +6,33 @@
 /*   By: jcharnec <jcharnec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:51:14 by areverte          #+#    #+#             */
-/*   Updated: 2023/04/05 17:55:21 by jcharnec         ###   ########.fr       */
+/*   Updated: 2023/04/05 19:11:09 by jcharnec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 //función que cuenta la cantidad de dígitos en un número entero
-static int	ft_digits(long nb)
+static int	ft_dgt(long nb)
 {
-	int	digits;
+	int	dgt;
 
-	digits = 0;
+	dgt = 0;
 	if (nb < 0)
 	{
 		nb = nb * -1;
-		digits++;
+		dgt++;
 	}
 	while (nb > 0)
 	{
 		nb = nb / 10;
-		digits++;
+		dgt++;
 	}
-	return (digits);
+	return (dgt);
 }
 
 //función que convierte un número entero en una cadena de caracteres
-static char	*ft_tostring(char *s, int digits, long i)
+static char	*ft_tostring(char *s, int dgt, long i)
 {
 	if (i < 0)
 	{
@@ -41,9 +41,9 @@ static char	*ft_tostring(char *s, int digits, long i)
 	}
 	while (i > 0)
 	{
-		s[digits] = '0' + (i % 10);
+		s[dgt] = '0' + (i % 10);
 		i = i / 10;
-		digits--;
+		dgt--;
 	}
 	return (s);
 }
@@ -52,9 +52,9 @@ static char	*ft_tostring(char *s, int digits, long i)
 char	*ft_itoa(int n)
 {
 	char	*s;
-	int		digits;
+	int		dgt;
 
-	digits = ft_digits(n);
+	dgt = ft_dgt(n);
 	if (n == 0)
 	{
 		s = malloc(sizeof(char) * 2);
@@ -64,11 +64,11 @@ char	*ft_itoa(int n)
 		s[1] = '\0';
 		return (s);
 	}
-	s = malloc(sizeof(char) * (digits + 1));
+	s = malloc(sizeof(char) * (dgt + 1));
 	if (!s)
 		return (NULL);
-	s[digits] = '\0';
-	digits--;
-	s = ft_tostring(s, digits, n);
+	s[dgt] = '\0';
+	dgt--;
+	s = ft_tostring(s, dgt, n);
 	return (s);
 }
